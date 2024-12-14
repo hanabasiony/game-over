@@ -13,6 +13,8 @@ const permadeathButton = document.querySelector('#pills-permadeath-tab')
 const superheroButton = document.querySelector('#pills-superhero-tab')
 const pixelButton = document.querySelector('#pills-pixel-tab')
 
+const mainLayerCards = document.querySelector('.outer-cards-cont')
+
 let checker = false;
 
 let gameCard;
@@ -458,13 +460,10 @@ pixelButton.addEventListener('click', function () {
     getpixel()
 })
 
-if (checker) {
-    console.log("check trriu");
-
-}
 let idOfImg;
 
 rowHtml.addEventListener('click', function (e) {
+    loadingPage.classList.remove('d-none')
     // console.log(e.target.currentSrc);
     let res = e.target.currentSrc
     let res2 = res.split('/')
@@ -492,7 +491,10 @@ function getDetailes() {
 
         const gamesDetails = await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/game?id=${idOfImg}`, options)
         gamesDetailsArr = await gamesDetails.json()
+        loadingPage.classList.add('d-none')
         descLayer.classList.remove('d-none')
+        mainLayerCards.classList.add('d-none')
+
         displayLayer()
         console.log(gamesDetailsArr);
 
@@ -535,6 +537,8 @@ function getDetailes() {
     }
     let extBtn = document.querySelector('#btnClose')
     extBtn.addEventListener('click',function(){
+        mainLayerCards.classList.remove('d-none')
+
         descLayer.classList.add('d-none')
         console.log("in exit");
         
