@@ -1,0 +1,207 @@
+:root{
+    /* font-family: "Nerko One", cursive !important; */
+    font-family: "Sour Gummy" !important;
+}
+
+body>header{
+    background-color: #272B30;
+    background-image: url('../img/wraper.png');
+    height: 220px;
+    width: 100%;
+}
+body{
+    height: 1000vh;
+    background-color: #272B30;
+}
+nav.navbar{
+    
+    
+    position: sticky !important;
+    top: 28px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    margin: 0px;
+    padding-bottom: 0px;
+    z-index: 100;
+}
+.inner-nav{
+    width: 75%;
+    margin: auto;
+    background-color: #3A497B !important;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+    padding: 5px 8px;
+
+   
+    /* transform: translateY(-50%); */
+}
+.navbar .img-div img{
+    width: 100%;
+}
+.navbar .img-div{
+    width: 17%;
+}
+nav h1{
+    font-size: 35px;
+    color: white;
+    font-family: "Nerko One", cursive;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: transparent;   
+    text-transform: uppercase;
+    transition: all 0.5s;
+}
+.nav-pills .nav-link:hover {
+    color: #0099CC !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link .active{
+    color: #0099CC !important;
+}
+nav li button{
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: "Nerko One", cursive;
+}
+
+/* !cards */
+.outer-cards-cont{
+    background-color: #272B30;
+    height: 100vh;
+}
+body {
+    font-family: "Nerko One", cursive;
+}
+.inner-col{
+    padding: 12px 12px;
+    background-color:#272B30 ;
+    border: 1px solid rgb(30, 29, 29);
+    border-radius: 10px;
+    transition: all 0.6s;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+}
+figure img{
+     width: 100%;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     filter: grayscale(70%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.titles-flex h3{
+    color: white;
+    font-size: 19px;
+    text-transform: capitalize;
+    font-family: "Nerko One", cursive;
+}
+.titles-flex span{
+    padding: 2px 7px;
+    border-radius: 5px;
+    background-color: #3A497B;
+    color: white;
+    transition: all 0.5s;
+}
+main figcaption p{
+    text-align: center;
+    color: #939598;
+    font-size: 14px;
+}
+.fotter{
+    border-top: 1px solid rgb(30, 29, 29); 
+    padding-top: 10px;
+
+  position: absolute;
+    align-items: end;
+    bottom: 10px;
+    right: 5px;
+    left: 5px;
+}
+.fotter span{
+    color: white;
+    background-color: #32383E;
+    border-radius: 5px;
+    padding: 1px 5px;
+}
+.inner-col:hover .titles-flex span{
+    background-color: #0D6EFD;
+}
+.inner-col:hover{
+    transform: scale(1.05);
+}
+.inner-col:hover figure img{
+    filter: grayscale(0%);
+}
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-size: 70px;
+    z-index: 9999;
+    opacity: 50%;
+}
+
+.desc-layer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2d2d2d;
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    z-index: 9999;
+    opacity: 100%;
+}
+
+.desc-layer .left h4{
+    font-size: 35px;
+}
+.desc-layer .right p{
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.right .line span{
+    background-color: #0099CC;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    padding: 2px 5px;
+}
+.exit-botn{
+    top: 35px;
+    right: 90px;
+    cursor: pointer;
+}
+
+
+
+
+@media only screen and (max-width: 992px){
+    .nav-links-cont{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .nav-links-cont li{
+        width: 100%;
+        margin: auto;
+    }
+
+}
