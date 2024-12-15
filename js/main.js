@@ -463,21 +463,28 @@ pixelButton.addEventListener('click', function () {
 let idOfImg;
 
 rowHtml.addEventListener('click', function (e) {
-    loadingPage.classList.remove('d-none')
-    // console.log(e.target.currentSrc);
-    let res = e.target.currentSrc
-    let res2 = res.split('/')
-    // console.log(res2);
-    console.log(res2[4]);
+    if (e.target.tagName == 'IMG') {
+        loadingPage.classList.remove('d-none')
+        // console.log(e.target.currentSrc);
+        let res = e.target.currentSrc
+        let res2 = res.split('/')
+        // console.log(res2);
+        console.log(res2[4]);
 
-    idOfImg = res2[4]
-    getDetailes()
+
+        idOfImg = res2[4]
+        getDetailes()
+    }else{
+        alert("press on the image to see details");
+        
+    }
+    
 
 })
 
 function getDetailes() {
-   const descLayer = document.querySelector('.desc-layer')
-   const descCont = document.querySelector('.desc-layer .container')
+    const descLayer = document.querySelector('.desc-layer')
+    const descCont = document.querySelector('.desc-layer .container')
     let gamesDetailsArr = []
     async function getDetailsApi() {
 
@@ -533,18 +540,18 @@ function getDetailes() {
    
     
             `
-            descCont.innerHTML = layerHtml
+        descCont.innerHTML = layerHtml
     }
     let extBtn = document.querySelector('#btnClose')
-    extBtn.addEventListener('click',function(){
+    extBtn.addEventListener('click', function () {
         mainLayerCards.classList.remove('d-none')
 
         descLayer.classList.add('d-none')
         console.log("in exit");
-        
+
     })
-    
-    
+
+
 }
 
 

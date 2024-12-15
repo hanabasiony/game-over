@@ -10,19 +10,19 @@ body>header{
     width: 100%;
 }
 body{
-    height: 100vh;
+    /* min-height: 100vh; */
     background-color: #272B30;
 }
 nav.navbar{
     
     
     position: sticky !important;
-    top: 28px;
+    top: 24px;
     transform: translateY(-50%);
     background-color: transparent;
     margin: 0px;
     padding-bottom: 0px;
-    z-index: 100;
+    z-index: 1000;
 }
 .inner-nav{
     width: 75%;
