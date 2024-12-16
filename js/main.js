@@ -12,7 +12,7 @@ const sailingButton = document.querySelector('#pills-sailing-tab')
 const permadeathButton = document.querySelector('#pills-permadeath-tab')
 const superheroButton = document.querySelector('#pills-superhero-tab')
 const pixelButton = document.querySelector('#pills-pixel-tab')
-
+const pressMsg = document.querySelector('.press-msg')
 const mainLayerCards = document.querySelector('.outer-cards-cont')
 
 let checker = false;
@@ -462,6 +462,11 @@ pixelButton.addEventListener('click', function () {
 
 let idOfImg;
 
+function pressFade(){
+  pressMsg.classList.add('d-none')
+}
+
+
 rowHtml.addEventListener('click', function (e) {
     if (e.target.tagName == 'IMG') {
         loadingPage.classList.remove('d-none')
@@ -475,12 +480,13 @@ rowHtml.addEventListener('click', function (e) {
         idOfImg = res2[4]
         getDetailes()
     }else{
-        alert("press on the image to see details");
-        
+        pressMsg.classList.remove('d-none')
+        setTimeout(pressFade,2000)
     }
     
 
 })
+
 
 function getDetailes() {
     const descLayer = document.querySelector('.desc-layer')

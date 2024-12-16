@@ -24,6 +24,9 @@ nav.navbar{
     padding-bottom: 0px;
     z-index: 1000;
 }
+.navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0,0);
+}
 .inner-nav{
     width: 75%;
     margin: auto;
@@ -193,8 +196,23 @@ main figcaption p{
     right: 90px;
     cursor: pointer;
 }
-
-
+.press-msg p{
+    color: rgb(175, 72, 72);
+    text-align: center;
+    margin-bottom: 0px;
+}
+.press-msg{
+    position: fixed;
+    bottom: 70px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 40%;
+    left: 40%;
+}
 
 @media only screen and (max-width: 992px){
     .nav-links-cont{
@@ -218,6 +236,14 @@ main figcaption p{
     .desc-layer{
         
         padding-left: 20px;
+    }
+    .press-msg{
+        right: 20%;
+        left: 20%;
+    
+    }
+    .btn-close{
+        padding: 10px;
     }
     
 
